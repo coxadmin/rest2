@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="097b29cc-2e4e-44b5-b6ac-1dec7b1f32c1" activeEnvironment="Default" name="REST_S" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="b790401a-0462-4d6b-b84c-2d2a03aa0179" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://issues.stg.cox.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://issues.stg.cox.com</con:endpoint></con:endpoints><con:resource name="Issue" path="/rest/api/2/issue/" id="1ff358f3-92fa-498a-b370-d2e00b92f422"><con:settings/><con:parameters/><con:method name="Issue 1" id="77bba45d-ad90-4c62-b269-a617dbbd2f36" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:iss="https://issues.stg.cox.com/rest/api/2/issue/">iss:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:iss="https://issues.stg.cox.com/rest/api/2/issue/">iss:Response</con:element></con:representation><con:request name="Request 1" id="1a7e44b3-9965-4328-bc3b-392e8b9f023c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic c29tcmVkZHk6TWlncmF0aW9uQDI3ODAy" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>https://issues.stg.cox.com</con:endpoint><con:request>{
+    "fields": {
+       "project":
+       {
+                      "key": "HVP"
+       },
+       "summary": "Testing Rest API",
+       "description": "Creating of an issue using REST API",
+       "issuetype": {
+                      "name": "Story"
+                     },
+        "labels": [
+                    "Testing_Env"
+                ],
+        "components": [
+                    {
+                      "name": "CM_Device"
+                    }
+                      ],
+        "fixVersions": [
+                    {
+                      "name": "Test"
+                    }
+                ],
+        "assignee": {
+                   "name": "somreddy"
+                     },
+        "priority": {
+                    "name": "Critical"
+                },
+        "customfield_10104": 19
+        
+   }
+}
+</con:request><con:originalUri>https://issues.stg.cox.com/rest/api/2/issue/</con:originalUri><con:credentials><con:username>somreddy</con:username><con:password>Migration@27802</con:password><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="731f224a-13aa-4764-b05a-4fd6169ca786" name="TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="863c6820-6595-48c8-9510-a6b97ff58b58" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Create Issue" id="d204eaed-302c-4f3b-9deb-6f58c8d00e06"><con:settings/><con:config service="https://issues.stg.cox.com" resourcePath="/rest/api/2/issue/" methodName="Issue 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create Issue" id="1a7e44b3-9965-4328-bc3b-392e8b9f023c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic c29tcmVkZHk6TWlncmF0aW9uQDI3ODAy" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>https://issues.stg.cox.com</con:endpoint><con:request>{
+    "fields": {
+       "project":
+       {
+                      "key": "HVP"
+       },
+       "summary": "Testing Rest API",
+       "description": "Creating of an issue using REST API",
+       "issuetype": {
+                      "name": "Story"
+                     },
+        "labels": [
+                    "Testing_Env"
+                ],
+        "components": [
+                    {
+                      "name": "CM_Device"
+                    }
+                      ],
+        "fixVersions": [
+                    {
+                      "name": "Test"
+                    }
+                ],
+        "assignee": {
+                   "name": "somreddy"
+                     },
+        "priority": {
+                    "name": "Critical"
+                },
+        "customfield_10104": 19
+        
+   }
+}
+</con:request><con:originalUri>https://issues.stg.cox.com/rest/api/2/issue/</con:originalUri><con:credentials><con:username>somreddy</con:username><con:password>Migration@27802</con:password><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
